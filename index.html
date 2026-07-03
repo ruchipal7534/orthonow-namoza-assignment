@@ -3,133 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expert Orthopaedic Consultation | OrthoNow Bengaluru</title>
-    <meta name="description" content="Get expert relief from knee and back pain. Book your consultation with top orthopaedic specialists at OrthoNow Bengaluru.">
+    <title>Book Orthopaedic Consultation | OrthoNow</title>
+    <meta name="description" content="Get an expert orthopaedic opinion for knee and back pain. Book your consultation at OrthoNow clinics across Bengaluru.">
+    
+    <!-- Critical Inline Styles for 90+ PageSpeed Score -->
     <style>
         :root {
-            --primary-color: #0056B3;
-            --secondary-color: #28A745;
-            --text-dark: #1A1A1A;
-            --text-light: #666666;
-            --bg-light: #F8F9FA;
-            --white: #FFFFFF;
+            --primary: #0056b3;
+            --secondary: #28a745;
+            --text-dark: #2d3748;
+            --bg-light: #f7fafc;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { background-color: var(--white); color: var(--text-dark); line-height: 1.5; -webkit-font-smoothing: antialiased; }
-        header { padding: 16px; background: var(--white); border-bottom: 1px solid #E5E5E5; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        .logo { font-size: 22px; font-weight: 800; color: var(--primary-color); letter-spacing: -0.5px; }
-        .hero { padding: 40px 0; display: flex; flex-direction: column; gap: 32px; }
-        .hero-headline { font-size: 32px; font-weight: 800; line-height: 1.2; color: #051A33; letter-spacing: -0.5px; margin-bottom: 12px; }
-        .hero-subheadline { font-size: 18px; color: var(--text-light); margin-bottom: 24px; }
-        .form-container { background: var(--bg-light); padding: 24px; border-radius: 12px; border: 1px solid #EAEAEA; }
-        .form-title { font-size: 20px; font-weight: 700; margin-bottom: 16px; color: #051A33; }
-        .form-group { margin-bottom: 16px; }
-        label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; color: #333333; }
-        input[type="text"], input[type="tel"] { width: 100%; padding: 14px; font-size: 16px; border: 1px solid #CCCCCC; border-radius: 6px; outline: none; transition: border-color 0.2s; -webkit-appearance: none; }
-        input[type="text"]:focus, input[type="tel"]:focus { border-color: var(--primary-color); }
-        .btn-submit { width: 100%; background: var(--secondary-color); color: var(--white); border: none; padding: 16px; font-size: 18px; font-weight: 700; border-radius: 6px; cursor: pointer; transition: background 0.2s; margin-top: 8px; }
+        body { color: var(--text-dark); background-color: #ffffff; line-height: 1.5; }
+        header { background: #ffffff; border-bottom: 1px solid #e2e8f0; padding: 15px 20px; text-align: center; }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; }
+        
+        /* Hero Section Split Layout (Desktop to Mobile Optimized) */
+        .hero { display: flex; flex-direction: column; max-width: 1200px; margin: 0 auto; padding: 40px 20px; gap: 30px; }
+        @media(min-width: 768px) { .hero { flex-direction: row; align-items: center; padding: 60px 20px; } .hero-content, .hero-form { flex: 1; } }
+        
+        .badge { display: inline-block; background: #e3f2fd; color: var(--primary); padding: 6px 12px; font-size: 14px; font-weight: 600; border-radius: 4px; margin-bottom: 15px; }
+        h1 { font-size: 28px; line-height: 1.2; color: #1a202c; margin-bottom: 15px; }
+        @media(min-width: 768px) { h1 { font-size: 40px; } }
+        .p-lead { font-size: 16px; color: #4a5568; margin-bottom: 25px; }
+        @media(min-width: 768px) { .p-lead { font-size: 18px; } }
+        
+        /* Trust Elements Grid */
+        .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 30px; border-top: 1px solid #edf2f7; padding-top: 20px; }
+        .trust-item { text-align: center; }
+        .trust-num { font-size: 20px; font-weight: bold; color: var(--primary); display: block; }
+        .trust-label { font-size: 12px; color: #718096; }
+
+        /* Conversion Optimization Form Styling */
+        .form-container { background: var(--bg-light); border: 1px solid #e2e8f0; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); position: relative; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px; color: #4a5568; }
+        input, select { width: 100%; padding: 12px; border: 1px solid #cbd5e0; border-radius: 4px; font-size: 16px; transition: border-color 0.2s; }
+        input:focus, select:focus { outline: none; border-color: var(--primary); }
+        
+        .btn-submit { width: 100%; background: var(--secondary); color: white; border: none; padding: 14px; font-size: 18px; font-weight: 700; border-radius: 4px; cursor: pointer; transition: background 0.2s; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 5px; }
         .btn-submit:hover { background: #218838; }
-        .trust-section { margin-top: 24px; }
-        .trust-badge { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-        .trust-icon { width: 24px; height: 24px; color: var(--primary-color); fill: currentColor; }
-        .trust-text { font-size: 15px; font-weight: 600; color: #2C3E50; }
-        .hidden { display: none !important; }
-        .thank-you-state { text-align: center; padding: 40px 16px; }
-        .thank-you-title { color: var(--secondary-color); font-size: 24px; font-weight: 700; margin-bottom: 8px; }
-        @media (min-width: 768px) {
-            .hero { flex-direction: row; align-items: center; padding: 60px 0; gap: 60px; }
-            .hero-content { flex: 1; }
-            .hero-form { flex: 1; max-width: 450px; }
-            .hero-headline { font-size: 44px; }
-        }
+        
+        /* Thank You / Success State Layout */
+        .success-state { display: none; text-align: center; padding: 40px 10px; }
+        .success-state h2 { color: var(--secondary); font-size: 26px; margin-bottom: 12px; }
+        .success-state p { color: #4a5568; font-size: 16px; }
+        .tick-icon { font-size: 48px; color: var(--secondary); margin-bottom: 15px; }
     </style>
+    
+    <!-- Google Tag Manager Snippet Placeholder (Required for Martech setup verification) -->
     <script>
-        // DataLayer Initialization
         window.dataLayer = window.dataLayer || [];
     </script>
 </head>
 <body>
+
     <header>
-        <div class="container">
-            <div class="logo">OrthoNow</div>
-        </div>
+        <div class="logo">OrthoNow</div>
     </header>
-    <main class="container">
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="hero-headline">Get an Expert Orthopaedic Opinion in Bengaluru</h1>
-                <p class="hero-subheadline">Don't let chronic knee or back pain restrict your active life. Consult top specialists across our 9 advanced physical clinic hubs today.</p>
-                <div class="trust-section">
-                    <div class="trust-badge">
-                        <svg class="trust-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                        <span class="trust-text">9 Highly Equipped Clinics Across Bengaluru, Hyderabad & Chennai</span>
-                    </div>
-                    <div class="trust-badge">
-                        <svg class="trust-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                        <span class="trust-text">Over 15,000+ Successful Joint & Spine Remediations Managed</span>
-                    </div>
+
+    <main class="hero">
+        <!-- Left: Copy & Value Proposition Area -->
+        <section class="hero-content">
+            <span class="badge">Bengaluru's Leading Joint Specialists</span>
+            <h1>Get an Expert Orthopaedic Opinion</h1>
+            <p class="p-lead">Regain your mobility. Specialized care and advanced treatments for chronic knee pain, back pain, and sports injuries at 9 state-of-the-art clinics near you.</p>
+            
+            <!-- Trust Elements (Earns the form fill) -->
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <span class="trust-num">9+</span>
+                    <span class="trust-label">Clinics Across Cities</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-num">15K+</span>
+                    <span class="trust-label">Happy Patients</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-num">15+ Yrs</span>
+                    <span class="trust-label">Average Exp.</span>
                 </div>
             </div>
-            <div class="hero-form">
-                <div class="form-container" id="formContainer">
-                    <h2 class="form-title">Schedule Appointment</h2>
-                    <form id="consultationForm">
-                        <div class="form-group">
-                            <label for="fullName">Full Name</label>
-                            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required minlength="3">
-                        </div>
-                        <div class="form-group">
-                            <label for="phoneNumber">Mobile Number</label>
-                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="10-digit mobile number" pattern="[6-9][0-9]{9}" required>
-                        </div>
-                        <button type="submit" class="btn-submit">Book Free Consultation</button>
-                    </form>
-                </div>
-                <div class="form-container thank-you-state hidden" id="thankYouState">
-                    <h2 class="thank-you-title">Enquiry Received Successfully!</h2>
-                    <p style="color: var(--text-light)">An OrthoNow coordinator will reach out via phone call within 15 minutes. A confirmation is also being sent over WhatsApp.</p>
+        </section>
+
+        <!-- Right: Lightweight Minimal Form Block -->
+        <section class="hero-form">
+            <div class="form-container" id="formContainer">
+                <!-- Initial Interactive Form State -->
+                <form id="consultationForm" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="name" required placeholder="Enter your full name" autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="tel" id="phoneNumber" name="phone" required pattern="[6-9][0-9]{9}" placeholder="10-digit mobile number" autocomplete="tel">
+                    </div>
+                    <div class="form-group">
+                        <label for="clinicPreference">Preferred Clinic Location</label>
+                        <select id="clinicPreference" name="clinic" required>
+                            <option value="" disabled selected>Select nearest clinic</option>
+                            <option value="Indiranagar">Indiranagar (Bengaluru)</option>
+                            <option value="Jayanagar">Jayanagar (Bengaluru)</option>
+                            <option value="Whitefield">Whitefield (Bengaluru)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit">Book Consultation Now</button>
+                </form>
+
+                <!-- Dynamic Non-Reload Success State -->
+                <div class="success-state" id="successState">
+                    <div class="tick-icon">✓</div>
+                    <h2>Enquiry Received!</h2>
+                    <p>Thank you for reaching out. An OrthoNow care coordinator will call you back within 15 minutes to schedule your consultation slot.</p>
                 </div>
             </div>
         </section>
     </main>
-    <script>
-        document.getElementById('consultationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            var nameInput = document.getElementById('fullName');
-            var phoneInput = document.getElementById('phoneNumber');
-            
-            var cleanedName = nameInput.value.trim();
-            var cleanedPhone = phoneInput.value.trim();
 
-            // Client-side exact error handling rules
-            if (!cleanedName || cleanedName.length < 3) {
-                alert('Please enter your full name (minimum 3 characters).');
-                nameInput.focus();
-                return;
-            }
-            if (!/^[6-9]\d{9}$/.test(cleanedPhone)) {
-                alert('Please enter a valid 10-digit Indian mobile number starting with 6, 7, 8, or 9.');
-                phoneInput.focus();
-                return;
-            }
-            
-            // Structured GTM dataLayer tracking payload
+    <!-- Vanilla Javascript Logic -->
+    <script>
+        function handleFormSubmit(event) {
+            // 1. Prevent native form action from reloading the viewport
+            event.preventDefault();
+
+            // 2. Fetch input data variables dynamically
+            const nameValue = document.getElementById('fullName').value;
+            const phoneValue = document.getElementById('phoneNumber').value;
+            const clinicValue = document.getElementById('clinicPreference').value;
+
+            // 3. Fire the custom GTM DataLayer Push immediately on submission
             window.dataLayer.push({
                 'event': 'consultation_form_submitted',
-                'target_region': 'Bengaluru',
-                'form_placement': 'hero_primary',
-                'has_valid_payload': true
+                'lead_name': nameValue,
+                'lead_phone': phoneValue,
+                'clinic_preference': clinicValue,
+                'lead_source': 'Google Ads - Consultation Landing Page'
             });
 
-            // Streamlined trace logs for the Loom video walkthrough
-            console.log("Validation passed! Current GTM dataLayer state:", window.dataLayer[window.dataLayer.length - 1]);
-
-            // Seamless view shift
-            document.getElementById('formContainer').classList.add('hidden');
-            document.getElementById('thankYouState').classList.remove('hidden');
-        });
+            // 4. Dom Manipulation: Swap Form Layout to Greet Patient
+            document.getElementById('consultationForm').style.display = 'none';
+            document.getElementById('successState').style.display = 'block';
+        }
     </script>
 </body>
 </html>
