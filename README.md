@@ -58,8 +58,6 @@ Google Tag Manager cannot natively listen to multi-step form state changes. To t
   "booking_id": "BK-2026-9843"
 }
 
----
-
 ## Task 03 - CRM & Integration Architecture Design
 
 ### 1. End-to-End Workflow Architecture
