@@ -45,6 +45,7 @@
         }
     </style>
     <script>
+        // DataLayer Initialization
         window.dataLayer = window.dataLayer || [];
     </script>
 </head>
@@ -73,10 +74,10 @@
             <div class="hero-form">
                 <div class="form-container" id="formContainer">
                     <h2 class="form-title">Schedule Appointment</h2>
-                    <form id="consultationForm" novalidate>
+                    <form id="consultationForm">
                         <div class="form-group">
                             <label for="fullName">Full Name</label>
-                            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required minlength="3">
                         </div>
                         <div class="form-group">
                             <label for="phoneNumber">Mobile Number</label>
@@ -95,21 +96,37 @@
     <script>
         document.getElementById('consultationForm').addEventListener('submit', function(e) {
             e.preventDefault();
+            
             var nameInput = document.getElementById('fullName');
             var phoneInput = document.getElementById('phoneNumber');
-            if (!nameInput.value.trim()) {
-                alert('Please enter your name');
+            
+            var cleanedName = nameInput.value.trim();
+            var cleanedPhone = phoneInput.value.trim();
+
+            // Client-side exact error handling rules
+            if (!cleanedName || cleanedName.length < 3) {
+                alert('Please enter your full name (minimum 3 characters).');
+                nameInput.focus();
                 return;
             }
-            if (!/^[6-9]\d{9}$/.test(phoneInput.value.trim())) {
-                alert('Please enter a valid 10-digit Indian mobile number');
+            if (!/^[6-9]\d{9}$/.test(cleanedPhone)) {
+                alert('Please enter a valid 10-digit Indian mobile number starting with 6, 7, 8, or 9.');
+                phoneInput.focus();
                 return;
             }
+            
+            // Structured GTM dataLayer tracking payload
             window.dataLayer.push({
                 'event': 'consultation_form_submitted',
                 'target_region': 'Bengaluru',
-                'form_placement': 'hero_primary'
+                'form_placement': 'hero_primary',
+                'has_valid_payload': true
             });
+
+            // Streamlined trace logs for the Loom video walkthrough
+            console.log("Validation passed! Current GTM dataLayer state:", window.dataLayer[window.dataLayer.length - 1]);
+
+            // Seamless view shift
             document.getElementById('formContainer').classList.add('hidden');
             document.getElementById('thankYouState').classList.remove('hidden');
         });
