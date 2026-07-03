@@ -41,6 +41,7 @@ Google Tag Manager cannot natively listen to or understand multi-step form state
   "specialty": "Knee Pain / Arthroscopy"
 }
 **Step 2: User Contact Details & Preferred Date Entered**
+'''json
 {
   "event": "booking_step_complete",
   "step_number": 2,
@@ -48,7 +49,9 @@ Google Tag Manager cannot natively listen to or understand multi-step form state
   "clinic_location": "Indiranagar",
   "specialty": "Knee Pain / Arthroscopy"
 }
+
 **Step 3: Final Booking Confirmation (Success)**
+'''json
 {
   "event": "booking_step_complete",
   "step_number": 3,
